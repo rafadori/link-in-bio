@@ -163,7 +163,7 @@ link-in-bio/
 
 1. **Clone o repositório**
    ```bash
-   git clone [url-do-repositorio]
+   git clone https://github.com/rafadori/link-in-bio
    cd link-in-bio
    ```
 
@@ -211,14 +211,6 @@ link-in-bio/
 }
 ```
 
-## 📊 Métricas de Performance
-
-- **Lighthouse Score**: 95+ em todas as categorias
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-- **Time to Interactive**: < 3s
-
 ## ✅ Funcionalidades Implementadas
 
 - [x] **PWA** - Progressive Web App completo
@@ -229,28 +221,6 @@ link-in-bio/
 - [x] **Performance** - Lazy loading e otimizações
 - [x] **Favicon** - Ícones personalizados em múltiplos formatos
 - [x] **Configuração** - Sistema JSON para personalização
-
-## 🔧 Possíveis Melhorias Futuras
-
-- [ ] **Internacionalização** - Suporte a múltiplos idiomas
-- [ ] **Temas personalizados** - Mais opções de cores
-- [ ] **Integração com APIs** - Dados dinâmicos das redes sociais
-- [ ] **Dashboard Analytics** - Painel de métricas personalizado
-- [ ] **A/B Testing** - Testes de conversão
-- [ ] **Push Notifications** - Notificações web
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👨‍💻 Desenvolvedor
-
-**Rafael Nascimento**
-- 💼 Desenvolvedor Full Stack
-- 🌐 [Website](https://seu-website.com)
-- 📧 [Email](mailto:rafaelnra@outlook.com)
-- 💼 [LinkedIn](https://linkedin.com/in/rafaelnra)
-- 🐱 [GitHub](https://github.com/rafadori)
 
 ---
 
