@@ -1,19 +1,22 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    <linearGradient id="linkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Background Circle -->
-  <circle cx="16" cy="16" r="15" fill="url(#gradient)" stroke="#ffffff" stroke-width="2"/>
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#linkGradient)" stroke="#ffffff" stroke-width="1"/>
   
-  <!-- Letter R -->
-  <path d="M10 8 L10 24 M10 8 L18 8 Q22 8 22 12 Q22 16 18 16 L10 16 M18 16 L22 24" 
-        stroke="#ffffff" 
-        stroke-width="2.5" 
-        stroke-linecap="round" 
-        stroke-linejoin="round" 
-        fill="none"/>
+  <!-- Link chain symbol -->
+  <g fill="#ffffff" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left link -->
+    <path d="M10 13a3 3 0 0 0 0 6h4"/>
+    <path d="M14 11a3 3 0 0 1 0 6"/>
+    
+    <!-- Right link -->
+    <path d="M18 13a3 3 0 0 1 0 6h-4"/>
+    <path d="M22 11a3 3 0 0 0 0 6"/>
+  </g>
 </svg>
