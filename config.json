@@ -1,0 +1,86 @@
+{
+  "profile": {
+    "name": "Rafael Nascimento",
+    "bio": "Desenvolvedor Full Stack apaixonado por tecnologia e inovação. Criando soluções digitais que fazem a diferença.",
+    "jobTitle": "Desenvolvedor Full Stack",
+    "company": "Freelancer",
+    "profileImage": "./assets/profilepic.jpg",
+    "email": "rafael@exemplo.com"
+  },
+  "theme": {
+    "primaryColor": "#667eea",
+    "secondaryColor": "#764ba2",
+    "defaultTheme": "light"
+  },
+  "seo": {
+    "title": "Rafael Nascimento - Desenvolvedor Full Stack | Link in Bio",
+    "description": "Cartão de visitas digital de Rafael Nascimento, Desenvolvedor Full Stack especializado em tecnologias modernas. Conecte-se através das minhas redes sociais e projetos.",
+    "keywords": "Rafael Nascimento, Desenvolvedor Full Stack, JavaScript, React, Node.js, Web Developer, Portfolio, Link in Bio",
+    "ogImage": "./assets/profilepic.jpg",
+    "siteUrl": "https://seu-dominio.com",
+    "twitterHandle": "@seu_twitter"
+  },
+  "socialLinks": [
+    {
+      "platform": "github",
+      "url": "https://github.com/rafadori",
+      "label": "GitHub",
+      "icon": "fab fa-github",
+      "visible": true
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/rafael-nascimento",
+      "label": "LinkedIn",
+      "icon": "fab fa-linkedin",
+      "visible": true
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/seu_instagram",
+      "label": "Instagram",
+      "icon": "fab fa-instagram",
+      "visible": true
+    },
+    {
+      "platform": "twitter",
+      "url": "https://twitter.com/seu_twitter",
+      "label": "Twitter",
+      "icon": "fab fa-twitter",
+      "visible": true
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/seu_canal",
+      "label": "YouTube",
+      "icon": "fab fa-youtube",
+      "visible": true
+    },
+    {
+      "platform": "website",
+      "url": "https://seu-website.com",
+      "label": "Meu Website",
+      "icon": "fas fa-globe",
+      "visible": true
+    },
+    {
+      "platform": "email",
+      "url": "mailto:contato@exemplo.com",
+      "label": "Email",
+      "icon": "fas fa-envelope",
+      "visible": true
+    }
+  ],
+  "features": {
+    "darkMode": true,
+    "loadingScreen": true,
+    "lazyLoading": true,
+    "analytics": false,
+    "serviceWorker": false
+  },
+  "performance": {
+    "loadingDuration": 1500,
+    "animationDelay": 500,
+    "preloadImages": true
+  }
+}
