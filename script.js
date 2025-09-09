@@ -367,7 +367,7 @@ function initializeAnalytics() {
     if (emailLink) {
         emailLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const email = 'contato@exemplo.com';
+            const email = emailLink.href.replace('mailto:', '');
             
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(email).then(() => {

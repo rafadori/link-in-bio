@@ -1,5 +1,5 @@
 // Service Worker para Link in Bio
-const CACHE_NAME = 'link-in-bio-v1';
+const CACHE_NAME = 'link-in-bio-v2';
 const urlsToCache = [
   '/',
   '/index.html',

@@ -65,7 +65,7 @@
     },
     {
       "platform": "email",
-      "url": "mailto:contato@exemplo.com",
+      "url": "mailto:rafaelnra@outlook.com",
       "label": "Email",
       "icon": "fas fa-envelope",
       "visible": true
