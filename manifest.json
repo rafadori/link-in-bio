@@ -1,0 +1,79 @@
+{
+  "name": "Rafael Nascimento - Link in Bio",
+  "short_name": "Rafael Links",
+  "description": "Cartão de visitas digital de Rafael Nascimento, Desenvolvedor Full Stack",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "social"],
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view of the link in bio page"
+    },
+    {
+      "src": "./assets/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view of the link in bio page"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "GitHub",
+      "short_name": "GitHub",
+      "description": "Ver perfil no GitHub",
+      "url": "https://github.com/rafadori",
+      "icons": [
+        {
+          "src": "./assets/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "LinkedIn",
+      "short_name": "LinkedIn",
+      "description": "Ver perfil no LinkedIn",
+      "url": "https://linkedin.com/in/rafael-nascimento",
+      "icons": [
+        {
+          "src": "./assets/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
