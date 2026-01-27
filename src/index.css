@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'VT323', monospace;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #09090b;
+  background-color: #050505;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,17 +19,55 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #09090b;
+  background-color: #050505;
   color: #fafafa;
+  overflow: hidden; /* Prevent body scroll, let Desktop handle it */
 }
 
 #root {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar for Windows */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181b; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46; 
+  border: 1px solid #18181b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b; 
+}
+
+/* CRT Scanline Effect Global Class */
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.image-pixelated {
+    image-rendering: pixelated;
 }

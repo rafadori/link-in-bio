@@ -18,7 +18,9 @@ export default {
         foreground: "#fafafa", // zinc-50
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["VT323", "monospace"],
+        mono: ["VT323", "monospace"],
+        pixel: ["'Press Start 2P'", "cursive"],
       },
       animation: {
         'gradient-x': 'gradient-x 3s ease infinite',
