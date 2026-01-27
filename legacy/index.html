@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rafael Nascimento - Desenvolvedor Full Stack | Link in Bio</title>
+    <meta name="description" content="Cartão de visitas digital de Rafael Nascimento, Desenvolvedor Full Stack especializado em tecnologias modernas. Conecte-se através das minhas redes sociais e projetos.">
+    <meta name="keywords" content="Rafael Nascimento, Desenvolvedor Full Stack, JavaScript, React, Node.js, Web Developer, Portfolio, Link in Bio">
+    <meta name="author" content="Rafael Nascimento">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rafael Nascimento - Desenvolvedor Full Stack">
+    <meta property="og:description" content="Cartão de visitas digital com todos os meus links e redes sociais. Desenvolvedor Full Stack apaixonado por tecnologia.">
+    <meta property="og:image" content="./assets/profilepic.jpg">
+    <meta property="og:url" content="https://seu-dominio.com">
+    <meta property="og:site_name" content="Rafael Nascimento - Link in Bio">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rafael Nascimento - Desenvolvedor Full Stack">
+    <meta name="twitter:description" content="Cartão de visitas digital com todos os meus links e redes sociais.">
+    <meta name="twitter:image" content="./assets/profilepic.jpg">
+    <meta name="twitter:creator" content="@seu_twitter">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-link.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.svg">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./assets/profilepic.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-avatar"></div>
+            <div class="loading-text"></div>
+            <div class="loading-bio"></div>
+            <div class="loading-links">
+                <div class="loading-link"></div>
+                <div class="loading-link"></div>
+                <div class="loading-link"></div>
+            </div>
+            <div class="loading-social">
+                <div class="loading-social-icon"></div>
+                <div class="loading-social-icon"></div>
+                <div class="loading-social-icon"></div>
+                <div class="loading-social-icon"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+            <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+        <main class="card" itemscope itemtype="https://schema.org/Person">
+            <!-- Foto de Perfil -->
+            <div class="profile-section">
+                <div class="profile-image">
+                     <img src="https://github.com/rafadori.png" alt="Foto de perfil de Rafael Nascimento" id="profileImg" itemprop="image" loading="lazy"> 
+                </div>
+                <h1 class="name" itemprop="name">Rafael Nascimento</h1>
+                <p class="bio" itemprop="description">Desenvolvedor Fullstack @ Algar Tech. Criando soluções digitais que fazem a diferença.</p>
+                <meta itemprop="jobTitle" content="Desenvolvedor Full Stack">
+                <meta itemprop="worksFor" content="Freelancer">
+            </div>
+
+            <!-- Links das Redes Sociais -->
+            <nav class="links-section" role="navigation" aria-label="Links das redes sociais">
+                <a href="#" class="social-link" data-platform="instagram" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rafaelnra/" class="social-link" data-platform="linkedin" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://github.com/rafadori" class="social-link" data-platform="github" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="social-link" data-platform="twitter" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span>Twitter</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="social-link" data-platform="youtube" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span>YouTube</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="social-link" data-platform="website" target="_blank" rel="noopener noreferrer" itemprop="url">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    <span>Meu Website</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="mailto:rafaelnra@outlook.com" class="social-link" data-platform="email" itemprop="email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
+            </nav>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Feito com <i class="fas fa-coffee"></i> por Rafael</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
