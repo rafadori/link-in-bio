@@ -5,7 +5,6 @@ import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/link-in-bio/",
   build: {
     sourcemap: 'hidden',
   },
