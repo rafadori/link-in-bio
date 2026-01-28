@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Twitter, Youtube, Globe, Mail } from 'lucide-react';
+import { Github, Linkedin, Globe, Mail } from 'lucide-react';
 
 export const profile = {
   name: "Rafael Nascimento",
@@ -23,30 +23,6 @@ export const socialLinks = [
     icon: Linkedin,
     subtext: "Conexões profissionais",
     stack: "Carreira | Artigos"
-  },
-  {
-    platform: "instagram",
-    url: "https://instagram.com/seu_instagram",
-    label: "Instagram",
-    icon: Instagram,
-    subtext: "Bastidores",
-    stack: "Lifestyle | Tech"
-  },
-  {
-    platform: "twitter",
-    url: "https://twitter.com/seu_twitter",
-    label: "Twitter",
-    icon: Twitter,
-    subtext: "Pensamentos rápidos",
-    stack: "Tech | News"
-  },
-  {
-    platform: "youtube",
-    url: "https://youtube.com/seu_canal",
-    label: "YouTube",
-    icon: Youtube,
-    subtext: "Tutoriais e Dicas",
-    stack: "Vídeos | Code"
   },
   {
     platform: "website",

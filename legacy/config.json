@@ -17,8 +17,7 @@
     "description": "Cartão de visitas digital de Rafael Nascimento, Desenvolvedor Full Stack especializado em tecnologias modernas. Conecte-se através das minhas redes sociais e projetos.",
     "keywords": "Rafael Nascimento, Desenvolvedor Full Stack, JavaScript, React, Node.js, Web Developer, Portfolio, Link in Bio",
     "ogImage": "./assets/profilepic.jpg",
-    "siteUrl": "https://seu-dominio.com",
-    "twitterHandle": "@seu_twitter"
+    "siteUrl": "https://seu-dominio.com"
   },
   "socialLinks": [
     {
@@ -33,27 +32,6 @@
       "url": "https://linkedin.com/in/rafael-nascimento",
       "label": "LinkedIn",
       "icon": "fab fa-linkedin",
-      "visible": true
-    },
-    {
-      "platform": "instagram",
-      "url": "https://instagram.com/seu_instagram",
-      "label": "Instagram",
-      "icon": "fab fa-instagram",
-      "visible": true
-    },
-    {
-      "platform": "twitter",
-      "url": "https://twitter.com/seu_twitter",
-      "label": "Twitter",
-      "icon": "fab fa-twitter",
-      "visible": true
-    },
-    {
-      "platform": "youtube",
-      "url": "https://youtube.com/seu_canal",
-      "label": "YouTube",
-      "icon": "fab fa-youtube",
       "visible": true
     },
     {
