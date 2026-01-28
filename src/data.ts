@@ -4,7 +4,7 @@ export const profile = {
   name: "Rafael Nascimento",
   role: "Desenvolvedor Fullstack @ Algar Tech",
   bio: "Node.js • AWS • Vue • APIs • RPA",
-  avatar: "/profilepic.jpg", // We need to move the image back to public or src/assets
+  avatar: `${import.meta.env.BASE_URL}profilepic.jpg`,
 };
 
 export const socialLinks = [

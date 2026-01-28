@@ -281,7 +281,7 @@ export const AudioWindow = (props: AudioWindowProps) => {
           ))}
         </div>
 
-        <audio ref={audioRef} src="/audio/ambience.ogg" loop preload="auto" />
+        <audio ref={audioRef} src={`${import.meta.env.BASE_URL}audio/ambience.ogg`} loop preload="auto" />
       </div>
     </WindowFrame>
   );

@@ -268,14 +268,15 @@ export const TimeWindow = (props: TimeWindowProps) => {
     };
 
     const start = async () => {
+      const baseUrl = import.meta.env.BASE_URL;
       const [frame, maskImg] = await Promise.all([
-        loadImage("/hourglass/frame.png"),
-        loadImage("/hourglass/mask.png"),
+        loadImage(`${baseUrl}hourglass/frame.png`),
+        loadImage(`${baseUrl}hourglass/mask.png`),
       ]);
 
       let overlay: HTMLImageElement | undefined;
       try {
-        overlay = await loadImage("/hourglass/overlay.png");
+        overlay = await loadImage(`${baseUrl}hourglass/overlay.png`);
       } catch {
         overlay = undefined;
       }
