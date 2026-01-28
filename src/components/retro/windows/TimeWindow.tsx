@@ -6,6 +6,7 @@ interface TimeWindowProps {
   dragConstraints?: React.RefObject<Element>;
   isActive: boolean;
   onInteract: () => void;
+  className?: string;
 }
 
 type Assets = {

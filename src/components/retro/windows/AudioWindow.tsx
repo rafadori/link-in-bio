@@ -7,6 +7,7 @@ interface AudioWindowProps {
   dragConstraints?: React.RefObject<Element>;
   isActive: boolean;
   onInteract: () => void;
+  className?: string;
 }
 
 export const AudioWindow = (props: AudioWindowProps) => {
@@ -109,7 +110,7 @@ export const AudioWindow = (props: AudioWindowProps) => {
       const freq = freqRef.current;
 
       if (isPlaying && analyser && freq) {
-        analyser.getByteFrequencyData(freq);
+        analyser.getByteFrequencyData(freq as any);
         for (let i = 0; i < bars; i++) {
           const idx = Math.floor((i / bars) * freq.length);
           const v = freq[idx] / 255;

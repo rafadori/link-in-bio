@@ -1,11 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
-import { WindowFrame } from '../WindowFrame';
+import { useState, useEffect, useRef } from "react";
+import { WindowFrame } from "../WindowFrame";
 
 interface LogWindowProps {
   initialPosition?: { x: number; y: number };
   dragConstraints?: React.RefObject<Element>;
   isActive: boolean;
   onInteract: () => void;
+  className?: string;
 }
 
 const TASKS = [
@@ -20,7 +21,7 @@ const TASKS = [
   "Service Host: DHCP Client",
   "System Idle Process",
   "Registry",
-  "Memory Compression"
+  "Memory Compression",
 ];
 
 export const LogWindow = (props: LogWindowProps) => {
@@ -32,11 +33,11 @@ export const LogWindow = (props: LogWindowProps) => {
     const initialLogs = Array.from({ length: 8 }, () => generateLog());
     setLogs(initialLogs);
 
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches) return;
 
     const interval = setInterval(() => {
-      setLogs(prev => {
+      setLogs((prev) => {
         const newLogs = [...prev, generateLog()];
         if (newLogs.length > 50) newLogs.shift(); // Keep limit
         return newLogs;
@@ -54,7 +55,7 @@ export const LogWindow = (props: LogWindowProps) => {
 
   const generateLog = () => {
     const now = new Date();
-    const time = now.toLocaleTimeString('en-GB', { hour12: false });
+    const time = now.toLocaleTimeString("en-GB", { hour12: false });
     const id = Math.floor(Math.random() * 900000) + 100000;
     const task = TASKS[Math.floor(Math.random() * TASKS.length)];
     return `${time}   ${id}    ${task}`;
@@ -70,7 +71,10 @@ export const LogWindow = (props: LogWindowProps) => {
         </div>
         <div ref={scrollRef} className="flex-1 overflow-hidden relative">
           {logs.map((log, i) => (
-            <div key={i} className="whitespace-pre font-mono text-zinc-300 leading-tight">
+            <div
+              key={i}
+              className="whitespace-pre font-mono text-zinc-300 leading-tight"
+            >
               {log}
             </div>
           ))}

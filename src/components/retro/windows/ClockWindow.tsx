@@ -6,6 +6,7 @@ interface ClockWindowProps {
   dragConstraints?: React.RefObject<Element>;
   isActive: boolean;
   onInteract: () => void;
+  className?: string;
 }
 
 export const ClockWindow = (props: ClockWindowProps) => {

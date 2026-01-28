@@ -7,6 +7,7 @@ interface ProfileWindowProps {
   dragConstraints?: React.RefObject<Element>;
   isActive: boolean;
   onInteract: () => void;
+  className?: string;
 }
 
 export const ProfileWindow = (props: ProfileWindowProps) => {
