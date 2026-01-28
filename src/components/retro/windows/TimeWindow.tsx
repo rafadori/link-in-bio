@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { WindowFrame } from "../WindowFrame";
+import { cn } from "@/lib/utils";
 
 interface TimeWindowProps {
   initialPosition?: { x: number; y: number };
@@ -7,6 +8,7 @@ interface TimeWindowProps {
   isActive: boolean;
   onInteract: () => void;
   className?: string;
+  drag?: boolean;
 }
 
 type Assets = {
@@ -413,7 +415,11 @@ export const TimeWindow = (props: TimeWindowProps) => {
   }, []);
 
   return (
-    <WindowFrame title="TIME?" className="w-64 h-64" {...props}>
+    <WindowFrame
+      title="TIME?"
+      {...props}
+      className={cn("w-64 h-64", props.className)}
+    >
       <div className="flex items-center justify-center h-full bg-zinc-950">
         <canvas
           ref={canvasRef}

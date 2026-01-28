@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { WindowFrame } from "../WindowFrame";
 import { motion, useAnimation } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface AudioWindowProps {
   initialPosition?: { x: number; y: number };
@@ -8,6 +9,7 @@ interface AudioWindowProps {
   isActive: boolean;
   onInteract: () => void;
   className?: string;
+  drag?: boolean;
 }
 
 export const AudioWindow = (props: AudioWindowProps) => {
@@ -206,8 +208,8 @@ export const AudioWindow = (props: AudioWindowProps) => {
   return (
     <WindowFrame
       title="AUDIO"
-      className="w-[22rem] h-auto"
       {...props}
+      className={cn("w-[22rem] h-auto", props.className)}
       // Passando onClose como undefined explicitamente para garantir que não renderize o botão
       onClose={undefined}
     >
@@ -281,7 +283,12 @@ export const AudioWindow = (props: AudioWindowProps) => {
           ))}
         </div>
 
-        <audio ref={audioRef} src={`${import.meta.env.BASE_URL}audio/ambience.ogg`} loop preload="auto" />
+        <audio
+          ref={audioRef}
+          src={`${import.meta.env.BASE_URL}audio/ambience.ogg`}
+          loop
+          preload="auto"
+        />
       </div>
     </WindowFrame>
   );

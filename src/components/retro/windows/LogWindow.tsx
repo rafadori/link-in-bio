@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { WindowFrame } from "../WindowFrame";
+import { cn } from "@/lib/utils";
 
 interface LogWindowProps {
   initialPosition?: { x: number; y: number };
@@ -7,6 +8,7 @@ interface LogWindowProps {
   isActive: boolean;
   onInteract: () => void;
   className?: string;
+  drag?: boolean;
 }
 
 const TASKS = [
@@ -62,7 +64,11 @@ export const LogWindow = (props: LogWindowProps) => {
   };
 
   return (
-    <WindowFrame title="LOG" className="w-96 h-64" {...props}>
+    <WindowFrame
+      title="LOG"
+      {...props}
+      className={cn("w-96 h-64", props.className)}
+    >
       <div className="flex flex-col h-full bg-zinc-950 p-2 text-xs font-mono">
         <div className="flex border-b border-zinc-800 pb-1 mb-1 text-zinc-500 uppercase">
           <span className="w-20">TIME</span>

@@ -12,6 +12,7 @@ interface WindowFrameProps {
   onInteract?: () => void;
   onClose?: () => void;
   dragConstraints?: React.RefObject<Element>;
+  drag?: boolean;
 }
 
 // Noise texture for that worn metal look
@@ -35,17 +36,18 @@ export const WindowFrame = ({
   onInteract,
   onClose,
   dragConstraints,
+  drag = true,
 }: WindowFrameProps) => {
   return (
     <motion.div
-      drag
+      drag={drag}
       dragMomentum={false}
       dragConstraints={dragConstraints}
       initial={initialPosition}
       onMouseDown={onInteract}
       onTouchStart={onInteract}
       className={cn(
-        "absolute flex flex-col transition-all",
+        "flex flex-col transition-all",
         isActive ? "z-50" : "z-10 opacity-90",
         className,
       )}
