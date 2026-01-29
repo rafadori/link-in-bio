@@ -321,9 +321,9 @@ export const TimeWindow = (props: TimeWindowProps) => {
             const tc = countTop();
             const bc = countBottom();
             const tot = countAll();
-            console.log(
-              `[TimeWindow] tick=${tick} isRefilling=${isRefilling} top=${tc} bot=${bc} total=${tot}`,
-            );
+            // console.log(
+            //   `[TimeWindow] tick=${tick} isRefilling=${isRefilling} top=${tc} bot=${bc} total=${tot}`,
+            // );
           }
 
           clear();
@@ -343,11 +343,11 @@ export const TimeWindow = (props: TimeWindowProps) => {
             !isRefilling &&
             (topCount < 100 || topCount < totalCount * 0.25)
           ) {
-            console.log("[TimeWindow] Starting refill (Triggered)!", {
-              topCount,
-              bottomCount,
-              totalCount,
-            });
+            // console.log("[TimeWindow] Starting refill (Triggered)!", {
+            //   topCount,
+            //   bottomCount,
+            //   totalCount,
+            // });
             isRefilling = true;
             physicsAcc = 0;
 
