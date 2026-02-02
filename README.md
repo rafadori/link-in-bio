@@ -1,57 +1,69 @@
-# React + TypeScript + Vite
+# 🖥️ Retro Desktop Link-in-Bio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma página de "Link in Bio" reimaginada como uma interface de desktop retro interativa. Desenvolvido com foco em performance, estética pixel-art e interatividade, ele serve como um portfólio criativo para desenvolvedores.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Core:** [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Estilização:** [Tailwind CSS](https://tailwindcss.com/) (com `clsx` e `tailwind-merge` para utilitários dinâmicos)
+- **Animações e Interatividade:** [Framer Motion](https://www.framer.com/motion/) (gerenciamento de janelas arrastáveis, transições e efeitos)
+- **Gráficos e Simulação:** HTML5 Canvas API (para visualizadores de áudio e simulações de física)
+- **Ícones:** [Lucide React](https://lucide.dev/)
 
-## Expanding the ESLint configuration
+## 🧩 Arquitetura e Componentes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A aplicação é estruturada em torno de um "Desktop" virtual que gerencia múltiplas janelas flutuantes. O layout é responsivo, adaptando-se de uma grid livre no desktop para uma lista vertical rolável em dispositivos móveis.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Principais Componentes (`src/components/retro/`)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 1. `Desktop.tsx`
+O orquestrador principal.
+- Gerencia o estado das janelas (qual está ativa/focada, ordem de sobreposição Z-index).
+- Detecta o dispositivo (Mobile/Desktop) para ajustar o comportamento de layout e scroll.
+- Utiliza `framer-motion` para permitir que as janelas sejam arrastadas pelo usuário.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### 2. `ProfileWindow.tsx` ("C:\USER\PROFILE.EXE")
+O hub central de informações.
+- Exibe avatar, biografia e estatísticas do desenvolvedor.
+- Lista links sociais e de contato com efeitos de hover interativos.
+- Estilizado como uma aplicação de terminal/perfil de sistema.
 
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+#### 3. `AudioWindow.tsx` ("AUDIO")
+Um player de música ambiente totalmente funcional.
+- **Visualizer:** Implementa um analisador de espectro de áudio em tempo real usando Canvas API.
+- **Animação:** Simula um disco de vinil girando e um braço de tocadiscos que reage ao estado de reprodução.
+- **Terminal:** Exibe logs de "sistema" digitados dinamicamente para imersão.
+
+#### 4. `TimeWindow.tsx` ("TIME?")
+Uma simulação de ampulheta em pixel-art.
+- **Física de Areia:** Implementa uma simulação de autômato celular (semelhante ao *Falling Sand*) renderizada em Canvas.
+- A areia cai realisticamente e "recicla" quando a parte superior esvazia, criando um loop visual infinito e relaxante.
+
+#### 5. `ClockWindow.tsx` ("CALENDAR")
+Display de tempo e data.
+- Mostra hora, minuto e segundo em um layout digital industrial.
+- Inclui um mini-calendário gerado dinamicamente para o mês atual.
+
+#### 6. `LogWindow.tsx`
+Janela de logs do sistema (decorativa).
+- Adiciona à estética "hacker/developer", mostrando atividades fictícias do sistema em tempo real.
+
+## 🚀 Como Rodar
+
+1.  **Instalar dependências:**
+    ```bash
+    npm install
+    # ou
+    yarn
+    ```
+
+2.  **Iniciar servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build para produção:**
+    ```bash
+    npm run build
+    ```
