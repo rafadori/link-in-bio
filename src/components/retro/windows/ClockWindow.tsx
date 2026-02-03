@@ -71,7 +71,7 @@ export const ClockWindow = (props: ClockWindowProps) => {
           </div>
 
           {/* Decorative mini calendar grid */}
-          <div className="grid grid-cols-7 gap-1 text-[0.6rem] text-zinc-600 font-mono mt-2">
+          <div className="grid grid-cols-7 gap-1 text-xs text-zinc-600 font-mono mt-2">
             {Array.from({ length: 31 }, (_, i) => (
               <div
                 key={i}

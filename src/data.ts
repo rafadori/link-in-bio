@@ -1,8 +1,8 @@
-import { Github, Linkedin, Globe, Mail } from 'lucide-react';
+import { Github, Linkedin, Globe, Mail } from "lucide-react";
 
 export const profile = {
   name: "Rafael Nascimento",
-  role: "Desenvolvedor Fullstack @ Algar Tech",
+  role: "Desenvolvedor Fullstack @ Callink",
   bio: "Node.js • AWS • Vue • APIs • RPA",
   avatar: `${import.meta.env.BASE_URL}profilepic.jpg`,
 };
@@ -14,7 +14,7 @@ export const socialLinks = [
     label: "GitHub",
     icon: Github,
     subtext: "30+ repositórios",
-    stack: "JavaScript | Node | AWS"
+    stack: "JavaScript | Node | AWS",
   },
   {
     platform: "linkedin",
@@ -22,7 +22,7 @@ export const socialLinks = [
     label: "LinkedIn",
     icon: Linkedin,
     subtext: "Conexões profissionais",
-    stack: "Carreira | Artigos"
+    stack: "Carreira | Artigos",
   },
   {
     platform: "website",
@@ -30,7 +30,7 @@ export const socialLinks = [
     label: "Meu Website",
     icon: Globe,
     subtext: "Portfolio Completo",
-    stack: "Projetos | Blog"
+    stack: "Projetos | Blog",
   },
   {
     platform: "email",
@@ -38,17 +38,17 @@ export const socialLinks = [
     label: "Email",
     icon: Mail,
     subtext: "Entre em contato",
-    stack: "Business | Hello"
-  }
+    stack: "Business | Hello",
+  },
 ];
 
 export const devStats = [
   {
-    title: "⚙️ Stack principal",
-    content: "Node.js • AWS • Vue • MongoDB"
+    title: "Stack principal",
+    content: "Node.js • AWS • Vue • MongoDB",
   },
   {
-    title: "🚀 Foco atual",
-    content: "APIs • Automação • RPA • Escalabilidade"
-  }
+    title: "Foco atual",
+    content: "APIs • Automação • RPA • Escalabilidade",
+  },
 ];

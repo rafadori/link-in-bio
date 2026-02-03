@@ -35,7 +35,7 @@ export const ProfileWindow = (props: ProfileWindowProps) => {
               />
             </div>
           </div>
-          <h1 className="text-2xl font-pixel text-center text-zinc-100 mb-2 uppercase tracking-tighter leading-tight">
+          <h1 className="text-lg font-pixel text-center text-zinc-100 mb-2 uppercase tracking-tighter leading-tight">
             {profile.name}
           </h1>
           <p className="text-sm font-mono text-zinc-400 text-center border px-2 py-0.5 border-zinc-700">
@@ -50,10 +50,10 @@ export const ProfileWindow = (props: ProfileWindowProps) => {
         <div className="grid grid-cols-1 gap-2 mb-6">
           {devStats.map((stat, i) => (
             <div key={i} className="bg-zinc-900 border border-zinc-800 p-2">
-              <div className="text-[10px] uppercase text-zinc-500 mb-1">
+              <div className="text-sm uppercase text-zinc-500 mb-1">
                 {stat.title}
               </div>
-              <div className="text-xs text-zinc-300 font-mono">
+              <div className="text-sm text-zinc-300 font-mono">
                 {stat.content}
               </div>
             </div>
@@ -77,17 +77,17 @@ export const ProfileWindow = (props: ProfileWindowProps) => {
                 <div className="w-8 h-8 flex items-center justify-center border-r border-zinc-700 group-hover:border-black mr-3">
                   <Icon size={16} />
                 </div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-bold text-sm uppercase tracking-wide">
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-baseline gap-2">
+                    <span className="font-bold text-sm uppercase tracking-wide truncate">
                       {link.label}
                     </span>
-                    <span className="text-[10px] opacity-60 group-hover:opacity-100">
+                    <span className="text-sm opacity-60 group-hover:opacity-100 shrink-0">
                       {link.platform}
                     </span>
                   </div>
                   {(link.subtext || link.stack) && (
-                    <div className="text-[10px] opacity-60 group-hover:opacity-80 font-mono mt-0.5 truncate">
+                    <div className="text-sm opacity-60 group-hover:opacity-80 font-mono mt-0.5 truncate">
                       {link.subtext} {link.stack ? `| ${link.stack}` : ""}
                     </div>
                   )}
@@ -97,7 +97,7 @@ export const ProfileWindow = (props: ProfileWindowProps) => {
           })}
         </div>
 
-        <div className="mt-auto text-center pt-4 text-[10px] text-zinc-600 uppercase">
+        <div className="mt-auto text-center pt-4 text-xs text-zinc-600 uppercase">
           Ready for input... <span className="animate-pulse">_</span>
         </div>
       </div>

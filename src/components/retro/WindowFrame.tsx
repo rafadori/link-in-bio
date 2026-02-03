@@ -94,7 +94,7 @@ export const WindowFrame = ({
                 <div className="flex items-center gap-2 z-10">
                   <span className="text-[#555] text-[10px]">♦</span>
                   <div className="flex items-center gap-2">
-                    <span className="font-pixel text-sm uppercase tracking-[0.2em] text-[#c7bfa5] drop-shadow-md">
+                    <span className="font-pixel text-[10px] uppercase tracking-[0.1em] text-[#c7bfa5] drop-shadow-md">
                       {title}
                     </span>
                   </div>

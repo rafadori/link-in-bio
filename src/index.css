@@ -3,13 +3,38 @@
 @tailwind utilities;
 
 :root {
+  /* Cores com contraste AA (bg ~ #0b0e10) */
+  --color-bg: #0b0e10;
+  --color-text: #eaeef3;       /* ~14:1 */
+  --color-muted: #b9c2cc;      /* ~6.5:1 */
+  --color-accent: #66e4ff;     /* ~6:1 */
+  --color-border: #2a2f36;
+
+  /* Escala tipográfica base (monitor ≥24", zoom 100%) */
+  --font-body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);         /* 16→18px */
+  --font-small: clamp(0.875rem, 0.82rem + 0.2vw, 1rem);         /* 14→16px */
+  --font-label: clamp(0.9375rem, 0.88rem + 0.2vw, 1.0625rem);   /* 15→17px */
+  --font-h1: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  --font-h2: clamp(1.5rem, 1.3rem + 1.0vw, 2.25rem);
+  --font-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
+
+  --lh-body: 1.6;
+  --lh-heading: 1.3;
+
+  /* Espaçamentos relativos para evitar quebra em containers fixos */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --radius: 0.75rem;
+  --card-max: 42rem;
+
   font-family: 'VT323', monospace;
-  line-height: 1.5;
+  line-height: var(--lh-body);
   font-weight: 400;
 
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #050505;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,13 +42,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html { font-size: 100%; } /* 1rem = 16px */
+
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #050505;
-  color: #fafafa;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
   overflow: hidden; /* Prevent body scroll, let Desktop handle it */
 }
 
@@ -70,4 +99,24 @@ body {
 
 .image-pixelated {
     image-rendering: pixelated;
+}
+
+/* Media queries para monitores ≥24" (1920x1080) e 27"–32" (2560x1440) */
+@media (min-width: 1920px) {
+  :root {
+    --font-body: clamp(1.0625rem, 1rem + 0.30vw, 1.1875rem); /* 17→19px */
+    --font-small: clamp(0.9375rem, 0.88rem + 0.25vw, 1.0625rem); /* 15→17px */
+    --font-label: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);       /* 16→18px */
+    --card-max: 46rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --font-body: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem); /* 18→20px */
+    --font-small: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);    /* 16→18px */
+    --font-label: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); /* 17→19px */
+    --font-h1: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+    --card-max: 52rem;
+  }
 }

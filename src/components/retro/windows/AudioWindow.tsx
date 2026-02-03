@@ -267,7 +267,7 @@ export const AudioWindow = (props: AudioWindowProps) => {
         </div>
 
         {/* Bottom Section: Terminal */}
-        <div className="h-20 bg-[#0d0d0d] border border-[#333] p-2 font-mono text-[11px] text-[#c7bfa5] flex flex-col justify-end shadow-inner">
+        <div className="h-20 bg-[#0d0d0d] border border-[#333] p-2 font-mono text-xs text-[#c7bfa5] flex flex-col justify-end shadow-inner">
           {typedLines.map((line, i) => (
             <div key={i} className="opacity-80">
               {line}
